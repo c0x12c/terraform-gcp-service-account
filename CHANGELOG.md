@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.0]() (2025-07-11)
+
+### Breaking change
+
+* Change variable name `enabled_service_account` to `disabled_service_account` and default value to `false`
+
 ## [0.1.23]() (2025-07-11)
 
 ### Features
