@@ -9,10 +9,10 @@ This Terraform module creates a GCP Service Account.
 ```hcl
 module "service_account" {
   source  = "c0x12c/service-account/gcp"
-  version = "0.1.22"
+  version = "1.0.0"
   
   service_account_id         = "example"
-  enabled_service_account    = true
+  disabled_service_account   = false
   enabled_create_custom_role = true
   permissions = [
     "storage.buckets.get",
@@ -62,8 +62,8 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_description"></a> [description](#input\_description) | A text description of the service bot service account. Must be less than or equal to 256 UTF-8 bytes. | `string` | `null` | no |
+| <a name="input_disabled_service_account"></a> [disabled\_service\_account](#input\_disabled\_service\_account) | Whether the service account is disabled or not. | `string` | `false` | no |
 | <a name="input_enabled_create_custom_role"></a> [enabled\_create\_custom\_role](#input\_enabled\_create\_custom\_role) | Whether to create a custom role or not. | `bool` | `false` | no |
-| <a name="input_enabled_service_account"></a> [enabled\_service\_account](#input\_enabled\_service\_account) | Whether the service account is disabled or not. | `string` | `true` | no |
 | <a name="input_permissions"></a> [permissions](#input\_permissions) | A list of permissions granted to service account. | `list(string)` | `[]` | no |
 | <a name="input_roles"></a> [roles](#input\_roles) | A list of roles granted to service account. | `list(string)` | `[]` | no |
 | <a name="input_service_account_display_name"></a> [service\_account\_display\_name](#input\_service\_account\_display\_name) | The display name for the service bot service account. | `string` | `null` | no |
@@ -77,6 +77,6 @@ No modules.
 | <a name="output_service_account_id"></a> [service\_account\_id](#output\_service\_account\_id) | The service account id. |
 | <a name="output_service_account_key"></a> [service\_account\_key](#output\_service\_account\_key) | The private key in JSON format, base64 encoded. |
 | <a name="output_service_account_key_id"></a> [service\_account\_key\_id](#output\_service\_account\_key\_id) | An identifier for the service account key with format projects/{{project}}/serviceAccounts/{{account}}/keys/{{key}}. |
-| <a name="output_service_account_name"></a> [service\_account\_name](#output\_service\_account\_name) | The service account name. |                                                                                             |
+| <a name="output_service_account_name"></a> [service\_account\_name](#output\_service\_account\_name) | The service account name. |
 
 <!-- END_TF_DOCS -->
