@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.23]() (2025-07-11)
+
+### Features
+
+* Update input & example docs
+
 ## [0.1.22]() (2024-12-25)
 
 ### Features
