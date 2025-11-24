@@ -23,7 +23,7 @@ jobs:
       is_releasable: ${{ steps.check_unreleased.outputs.is_releasable }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Check for [Unreleased] section
         id: check_unreleased
@@ -52,7 +52,7 @@ jobs:
           private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
 
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           token: ${{ steps.github-app-token.outputs.token }}
           ref: ${{ github.head_ref }}
