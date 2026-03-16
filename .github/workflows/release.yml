@@ -45,7 +45,7 @@ jobs:
     if: github.repository_owner == 'c0x12c' && needs.verify-changelog.outputs.is_releasable == 'true'
     steps:
       - name: Create GitHub App Token
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@v3
         id: github-app-token
         with:
           app-id: ${{ vars.GH_APP_ID }}
